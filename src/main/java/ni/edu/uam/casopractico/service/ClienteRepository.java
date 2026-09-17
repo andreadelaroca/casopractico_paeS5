@@ -28,21 +28,42 @@ public class ClienteRepository {
     // Datos pre-hechos (Mock Data)
     private void cargarDatosPrueba() {
         listaClientes.add(new Cliente(
-                "Juan Antonio", "Pérez López", "VIP", "Managua",
-                LocalDate.of(1990, 5, 15), "Consultoría",
-                Arrays.asList("Asesoría Técnica", "Capacitación"), null
+                "Jorge David",
+                "Morales Osejo",
+                "VIP",
+                "Managua",
+                LocalDate.of(1990, 5, 15),
+                "Consultoría",
+                true,
+                false,
+                true,
+                null
         ));
 
         listaClientes.add(new Cliente(
-                "Maria Elena", "García Torres", "Frecuente", "León",
-                LocalDate.of(1985, 8, 22), "Implementación",
-                Arrays.asList("Instalación"), null
+                "Juan Antonio",
+                "Pérez López",
+                "VIP",
+                "Managua",
+                LocalDate.of(1990, 5, 15),
+                "Consultoría",
+                true,
+                false,
+                true,
+                null
         ));
 
         listaClientes.add(new Cliente(
-                "Carlos Alberto", "Mendoza Ruiz", "Regular", "Granada",
-                LocalDate.of(1995, 12, 3), "Soporte Técnico",
-                Arrays.asList("Asesoría Técnica", "Instalación"), null
+                "Maria Alejandra",
+                "Pérez Ortega",
+                "VIP",
+                "Managua",
+                LocalDate.of(1995, 4, 15),
+                "Consultoría",
+                true,
+                false,
+                true,
+                null
         ));
     }
 
