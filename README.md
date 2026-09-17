@@ -1,8 +1,8 @@
 Integrantes:
-Andrea Sofia De La Roca Delgado
-Alfredo David Montalvan Osejo
-Jorge Adan Ortega Torres
-Nazario Escoto Largaespada
+- Andrea Sofia De La Roca Delgado
+- Alfredo David Montalvan Osejo
+- Jorge Adan Ortega Torres
+- Nazario Escoto Largaespada
 
 Registro y Consulta de Clientes
 
