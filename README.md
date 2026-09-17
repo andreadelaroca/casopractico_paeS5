@@ -5,15 +5,15 @@ Este proyecto consiste en una aplicación de escritorio creada para facilitar el
 La aplicación cuenta con diferentes ventanas que permiten navegar por el sistema, registrar nuevos clientes y consultar la información que ya fue almacenada. También permite seleccionar un cliente para visualizar sus datos de manera más detallada.
 
 Funciones principales
-Inicio de sesión.
-Registro de nuevos clientes.
-Consulta de clientes registrados.
-Visualización de información detallada.
-Registro de solicitudes.
-Selección de fotografía del cliente.
-Navegación entre las diferentes ventanas.
-Validación de los datos ingresados.
-Tecnologías utilizadas
+- Inicio de sesión.
+- Registro de nuevos clientes.
+- Consulta de clientes registrados.
+- Visualización de información detallada.
+- Registro de solicitudes.
+- Selección de fotografía del cliente.
+- Navegación entre las diferentes ventanas.
+- Validación de los datos ingresados.
+- Tecnologías utilizadas
 
 El proyecto fue desarrollado principalmente utilizando Java y JavaFX. Las interfaces gráficas fueron creadas mediante FXML y Scene Builder, mientras que Lombok se utiliza para simplificar los modelos del sistema.
 
