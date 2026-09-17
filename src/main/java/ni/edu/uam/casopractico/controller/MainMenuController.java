@@ -7,6 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
+import static ni.edu.uam.casopractico.util.NavigationManager.*;
 
 public class MainMenuController {
 
@@ -31,14 +32,14 @@ public class MainMenuController {
     @FXML
     private void handleNavRegistro(ActionEvent event) {
         lblEstado.setText("Estado: Cargando pantalla de registro...");
-        // TODO: Cargar el FXML de Registro de Clientes (ej. FXMLLoader)
+        abrirVentana("ni/edu/uam/view/ClienteRegistroView.fxml", "Registro de Clientes");
         mostrarAlerta(Alert.AlertType.INFORMATION, "Navegación", "Módulo de Registro de Clientes");
     }
 
     @FXML
     private void handleNavConsulta(ActionEvent event) {
         lblEstado.setText("Estado: Cargando pantalla de consulta...");
-        // TODO: Cargar el FXML de Consulta de Clientes (ej. FXMLLoader)
+        abrirVentana("ni/edu/uam/view/ClienteConsultaView.fxml", "Registro de Clientes");
         mostrarAlerta(Alert.AlertType.INFORMATION, "Navegación", "Módulo de Consulta de Clientes");
     }
 
@@ -51,7 +52,7 @@ public class MainMenuController {
         alert.showAndWait().ifPresent(response -> {
             if (response == ButtonType.YES) {
                 lblEstado.setText("Estado: Sesión cerrada");
-                // TODO: Redirigir a la vista de Login
+                abrirVentana("ni/edu/uam/view/LoginView.fxml", "Registro de Clientes");
             }
         });
     }
