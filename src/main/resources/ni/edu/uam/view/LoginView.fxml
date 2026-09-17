@@ -12,9 +12,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="500.0" minWidth="750.0" prefHeight="500.0" prefWidth="750.0" styleClass="login-container" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uam.casopractico.controller.LoginController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="500.0" minWidth="750.0" prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uam.casopractico.controller.LoginController">
     <left>
-        <VBox prefHeight="500.0" prefWidth="150.0" spacing="20.0" styleClass="sidebar" BorderPane.alignment="CENTER">
+        <VBox prefHeight="500.0" prefWidth="150.0" spacing="20.0" style="-fx-background-color: #1E293B;" BorderPane.alignment="CENTER">
             <padding>
                 <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
             </padding>
@@ -26,78 +26,90 @@
             </ImageView>
 
             <!-- TÃ­tulo sidebar -->
-            <Label styleClass="sidebar-title" text="Sistema de Gestión de Solicitudes" textAlignment="CENTER" wrapText="true">
+            <Label style="-fx-text-fill: #FFFFFF; -fx-font-size: 14; -fx-font-weight: bold;" text="Sistema de Gestión de Solicitudes" textAlignment="CENTER" wrapText="true">
                 <font>
                     <Font name="System Bold" size="14.0" />
                 </font>
             </Label>
+
             <!-- Separador -->
             <VBox prefHeight="20.0" />
+
             <!-- Opciones de menÃº -->
-            <Label styleClass="sidebar-menu-item" />
-            <Label styleClass="sidebar-menu-item" />
-            <Label styleClass="sidebar-menu-item" />
+            <Label style="-fx-text-fill: #CBD5E1; -fx-font-size: 11;" />
+            <Label style="-fx-text-fill: #CBD5E1; -fx-font-size: 11;" />
+            <Label style="-fx-text-fill: #CBD5E1; -fx-font-size: 11;" />
+
             <!-- Spacer -->
             <VBox VBox.vgrow="ALWAYS" />
+
             <!-- Footer -->
-            <Label styleClass="sidebar-footer" text="v1.0.0 - 2025" />
+            <Label style="-fx-text-fill: #94A3B8; -fx-font-size: 9;" text="v1.0.0 - 2025" />
         </VBox>
     </left>
     <center>
-        <VBox prefHeight="500.0" prefWidth="600.0" spacing="20.0" styleClass="login-form-container" BorderPane.alignment="CENTER">
+        <VBox prefHeight="500.0" prefWidth="600.0" spacing="20.0" style="-fx-background-color: #F3F4F6;" BorderPane.alignment="CENTER">
             <padding>
                 <Insets bottom="40.0" left="50.0" right="50.0" top="60.0" />
             </padding>
+
             <!-- TÃ­tulo principal -->
-            <Label styleClass="login-title" text="Acceso al sistema">
+            <Label style="-fx-text-fill: #1F2937; -fx-font-size: 28; -fx-font-weight: bold;" text="Acceso al sistema">
                 <font>
                     <Font name="System Bold" size="28.0" />
                 </font>
             </Label>
+
             <!-- SubtÃ­tulo -->
-            <Label styleClass="login-subtitle" text="Ingrese sus credenciales para continuar">
+            <Label style="-fx-text-fill: #6B7280; -fx-font-size: 12;" text="Ingrese sus credenciales para continuar">
                 <font>
                     <Font size="12.0" />
                 </font>
             </Label>
+
             <!-- Espaciador -->
             <VBox prefHeight="10.0" />
+
             <!-- Campo Usuario -->
             <VBox spacing="8.0">
-                <Label styleClass="form-label" text="Usuario">
+                <Label style="-fx-text-fill: #1F2937; -fx-font-size: 12; -fx-font-weight: bold;" text="Usuario">
                     <font>
                         <Font name="System Bold" size="12.0" />
                     </font>
                 </Label>
-                <TextField fx:id="usuarioTextField" maxWidth="1.7976931348623157E308" promptText="Nombre de usuario" styleClass="form-textfield" />
+                <TextField fx:id="usuarioTextField" maxWidth="1.7976931348623157E308" promptText="Nombre de usuario" style="-fx-font-size: 12; -fx-padding: 10; -fx-border-radius: 4; -fx-border-color: #E5E7EB; -fx-border-width: 1; -fx-background-color: #FFFFFF; -fx-text-fill: #1F2937; -fx-prompt-text-fill: #D1D5DB; -fx-focus-color: #3B82F6;" />
             </VBox>
+
             <!-- Campo ContraseÃ±a -->
             <VBox spacing="8.0">
-                <Label styleClass="form-label" text="Contraseña">
+                <Label style="-fx-text-fill: #1F2937; -fx-font-size: 12; -fx-font-weight: bold;" text="Contraseña">
                     <font>
                         <Font name="System Bold" size="12.0" />
                     </font>
                 </Label>
-                <PasswordField fx:id="passwordField" maxWidth="1.7976931348623157E308" promptText="Ingrese su contraseña" styleClass="form-textfield" />
+                <PasswordField fx:id="passwordField" maxWidth="1.7976931348623157E308" promptText="Ingrese su contraseña" style="-fx-font-size: 12; -fx-padding: 10; -fx-border-radius: 4; -fx-border-color: #E5E7EB; -fx-border-width: 1; -fx-background-color: #FFFFFF; -fx-text-fill: #1F2937; -fx-prompt-text-fill: #D1D5DB; -fx-focus-color: #3B82F6;" />
             </VBox>
+
             <!-- Espaciador -->
             <VBox prefHeight="15.0" />
+
             <!-- Botones -->
             <HBox alignment="CENTER_LEFT" spacing="15.0">
-                <Button fx:id="iniciarSesionButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleIniciarSesion" styleClass="btn-primary" text="Iniciar sesión" HBox.hgrow="ALWAYS">
+                <Button fx:id="iniciarSesionButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleIniciarSesion" style="-fx-padding: 12 20; -fx-font-size: 13; -fx-font-weight: bold; -fx-background-color: #1E40AF; -fx-text-fill: #FFFFFF; -fx-border-radius: 4; -fx-border-color: #1E40AF; -fx-border-width: 0; -fx-focus-color: #3B82F6; -fx-cursor: hand;" text="Iniciar sesión" HBox.hgrow="ALWAYS">
                     <font>
                         <Font name="System Bold" size="13.0" />
                     </font>
                 </Button>
-                <Button fx:id="salirButton" mnemonicParsing="false" onAction="#handleSalir" styleClass="btn-secondary" text="Salir">
+                <Button fx:id="salirButton" mnemonicParsing="false" onAction="#handleSalir" style="-fx-padding: 12 20; -fx-font-size: 13; -fx-font-weight: bold; -fx-background-color: #F3F4F6; -fx-text-fill: #1F2937; -fx-border-radius: 4; -fx-border-color: #E5E7EB; -fx-border-width: 1; -fx-cursor: hand;" text="Salir">
                     <font>
                         <Font name="System Bold" size="13.0" />
                     </font>
                 </Button>
             </HBox>
+
             <!-- Pie de pÃ¡gina -->
             <VBox VBox.vgrow="ALWAYS" />
-            <Label styleClass="login-footer" textAlignment="CENTER" wrapText="true">
+            <Label style="-fx-text-fill: #9CA3AF; -fx-font-size: 10;" textAlignment="CENTER" wrapText="true">
                 <font>
                     <Font size="10.0" />
                 </font>

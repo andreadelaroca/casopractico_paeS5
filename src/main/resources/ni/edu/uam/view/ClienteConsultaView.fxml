@@ -11,25 +11,25 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane prefHeight="650.0" prefWidth="900.0" styleClass="main-container" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uam.casopractico.controller.ClienteConsultaController" onKeyPressed="#handleKeyPressed">
+<BorderPane prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uam.casopractico.controller.ClienteConsultaController" onKeyPressed="#handleKeyPressed">
 
     <!-- Encabezado -->
     <top>
-        <VBox spacing="10.0" styleClass="header-area" BorderPane.alignment="CENTER">
+        <VBox spacing="10.0" style="-fx-background-color: #F3F4F6; -fx-border-color: #E5E7EB; -fx-border-width: 0 0 1 0;" BorderPane.alignment="CENTER">
             <padding>
                 <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
             </padding>
             <children>
-                <Label styleClass="title-label" text="Consulta de Clientes Registrados" />
-                <Label styleClass="subtitle-label" text="Haga doble clic sobre un cliente para ver o editar su detalle" />
+                <Label text="Consulta de Clientes Registrados" style="-fx-text-fill: #1F2937; -fx-font-size: 24; -fx-font-weight: bold;" />
+                <Label text="Haga doble clic sobre un cliente para ver o editar su detalle" style="-fx-text-fill: #6B7280; -fx-font-size: 12;" />
 
                 <!-- Barra de Búsqueda y Filtros -->
                 <HBox alignment="CENTER_LEFT" spacing="15.0">
                     <children>
-                        <TextField fx:id="txtBuscar" prefWidth="250.0" promptText="🔍 Buscar por nombre..." />
-                        <ComboBox fx:id="cmbFiltroCiudad" prefWidth="180.0" promptText="Filtrar por Ciudad" />
-                        <Button fx:id="btnBuscar" onAction="#handleBuscar" styleClass="btn-secondary" text="Buscar" />
-                        <Button fx:id="btnLimpiarFiltros" onAction="#handleLimpiarFiltros" styleClass="btn-secondary" text="Limpiar Filtros" />
+                        <TextField fx:id="txtBuscar" prefWidth="250.0" promptText="🔍 Buscar por nombre..." style="-fx-font-size: 12; -fx-padding: 8; -fx-border-color: #E5E7EB; -fx-border-width: 1; -fx-border-radius: 4; -fx-background-color: #FFFFFF; -fx-text-fill: #1F2937; -fx-prompt-text-fill: #D1D5DB;" />
+                        <ComboBox fx:id="cmbFiltroCiudad" prefWidth="180.0" promptText="Filtrar por Ciudad" style="-fx-font-size: 12; -fx-padding: 8; -fx-border-color: #E5E7EB; -fx-border-width: 1; -fx-border-radius: 4; -fx-background-color: #FFFFFF;" />
+                        <Button fx:id="btnBuscar" onAction="#handleBuscar" text="Buscar" style="-fx-padding: 8 16; -fx-font-size: 12; -fx-font-weight: bold; -fx-background-color: #F3F4F6; -fx-text-fill: #1F2937; -fx-border-color: #E5E7EB; -fx-border-width: 1; -fx-border-radius: 4; -fx-cursor: hand;" />
+                        <Button fx:id="btnLimpiarFiltros" onAction="#handleLimpiarFiltros" text="Limpiar Filtros" style="-fx-padding: 8 16; -fx-font-size: 12; -fx-font-weight: bold; -fx-background-color: #F3F4F6; -fx-text-fill: #1F2937; -fx-border-color: #E5E7EB; -fx-border-width: 1; -fx-border-radius: 4; -fx-cursor: hand;" />
                     </children>
                     <VBox.margin>
                         <Insets top="10.0" />
@@ -41,12 +41,12 @@
 
     <!-- Centro: Tabla de Clientes con evento MouseEvent -->
     <center>
-        <VBox styleClass="table-container" BorderPane.alignment="CENTER">
+        <VBox style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
             <padding>
                 <Insets bottom="15.0" left="20.0" right="20.0" top="10.0" />
             </padding>
             <children>
-                <TableView fx:id="tblClientes" onMouseClicked="#handleTablaClick" prefHeight="450.0" prefWidth="860.0" VBox.vgrow="ALWAYS">
+                <TableView fx:id="tblClientes" onMouseClicked="#handleTablaClick" prefHeight="450.0" prefWidth="860.0" style="-fx-font-size: 12; -fx-padding: 5;" VBox.vgrow="ALWAYS">
                     <columns>
                         <TableColumn fx:id="colNombreCompleto" prefWidth="220.0" text="Nombre Completo" />
                         <TableColumn fx:id="colTipoCliente" prefWidth="140.0" text="Tipo de Cliente" />
@@ -64,19 +64,19 @@
 
     <!-- Barra Inferior de Acciones -->
     <bottom>
-        <HBox alignment="CENTER_RIGHT" spacing="15.0" styleClass="actions-bar" BorderPane.alignment="CENTER">
+        <HBox alignment="CENTER_RIGHT" spacing="15.0" style="-fx-background-color: #F3F4F6; -fx-border-color: #E5E7EB; -fx-border-width: 1 0 0 0;" BorderPane.alignment="CENTER">
             <padding>
                 <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
             </padding>
             <children>
-                <Button fx:id="btnVolver" onAction="#handleVolver" styleClass="btn-secondary" text="Volver al Menú">
+                <Button fx:id="btnVolver" onAction="#handleVolver" text="Volver al Menú" style="-fx-padding: 10 16; -fx-font-size: 12; -fx-font-weight: bold; -fx-background-color: #F3F4F6; -fx-text-fill: #1F2937; -fx-border-color: #E5E7EB; -fx-border-width: 1; -fx-border-radius: 4; -fx-cursor: hand;">
                     <graphic>
-                        <Label style="-fx-font-size: 14px;" text="⬅ " />
+                        <Label style="-fx-font-size: 14;" text="⬅ " />
                     </graphic>
                 </Button>
-                <Button fx:id="btnEditar" onAction="#handleVerDetalle" styleClass="btn-primary" text="Ver Detalle">
+                <Button fx:id="btnEditar" onAction="#handleVerDetalle" text="Ver Detalle" style="-fx-padding: 10 16; -fx-font-size: 12; -fx-font-weight: bold; -fx-background-color: #1E40AF; -fx-text-fill: #FFFFFF; -fx-border-color: #1E40AF; -fx-border-width: 0; -fx-border-radius: 4; -fx-cursor: hand;">
                     <graphic>
-                        <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="✏ " />
+                        <Label style="-fx-font-size: 14; -fx-text-fill: white;" text="✏ " />
                     </graphic>
                 </Button>
             </children>

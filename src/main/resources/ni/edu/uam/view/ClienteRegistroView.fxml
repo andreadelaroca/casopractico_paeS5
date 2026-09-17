@@ -17,24 +17,24 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane prefHeight="650.0" prefWidth="850.0" styleClass="main-container" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uam.casopractico.controller.ClienteRegistroController" onKeyPressed="#handleKeyPressed">
+<BorderPane prefHeight="650.0" prefWidth="850.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uam.casopractico.controller.ClienteRegistroController" onKeyPressed="#handleKeyPressed">
 
     <!-- Encabezado superior -->
     <top>
-        <VBox styleClass="header-area" BorderPane.alignment="CENTER">
+        <VBox style="-fx-background-color: #F3F4F6; -fx-border-color: #E5E7EB; -fx-border-width: 0 0 1 0;" BorderPane.alignment="CENTER">
             <padding>
-                <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" /> v
+                <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
             </padding>
             <children>
-                <Label styleClass="title-label" text="Registro de Nuevo Cliente" />
-                <Label styleClass="subtitle-label" text="Ingrese los datos requeridos para completar el formulario" />
+                <Label text="Registro de Nuevo Cliente" style="-fx-text-fill: #1F2937; -fx-font-size: 24; -fx-font-weight: bold;" />
+                <Label text="Ingrese los datos requeridos para completar el formulario" style="-fx-text-fill: #6B7280; -fx-font-size: 12;" />
             </children>
         </VBox>
     </top>
 
     <!-- Centro: Formulario e Imagen -->
     <center>
-        <ScrollPane fitToWidth="true" styleClass="form-scroll" BorderPane.alignment="CENTER">
+        <ScrollPane fitToWidth="true" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
             <content>
                 <HBox spacing="30.0">
                     <padding>
@@ -57,52 +57,52 @@
                                 <RowConstraints minHeight="35.0" />
                             </rowConstraints>
                             <children>
-                                <Label text="Nombres:" GridPane.rowIndex="0" />
-                                <TextField fx:id="txtNombres" promptText="Ej: Juan Antonio" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                                <Label text="Nombres:" style="-fx-text-fill: #1F2937; -fx-font-size: 12; -fx-font-weight: bold;" GridPane.rowIndex="0" />
+                                <TextField fx:id="txtNombres" promptText="Ej: Juan Antonio" style="-fx-font-size: 12; -fx-padding: 8; -fx-border-color: #E5E7EB; -fx-border-width: 1; -fx-border-radius: 4; -fx-background-color: #FFFFFF; -fx-text-fill: #1F2937; -fx-prompt-text-fill: #D1D5DB;" GridPane.columnIndex="1" GridPane.rowIndex="0" />
 
-                                <Label text="Apellidos:" GridPane.rowIndex="1" />
-                                <TextField fx:id="txtApellidos" promptText="Ej: Pérez López" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                <Label text="Apellidos:" style="-fx-text-fill: #1F2937; -fx-font-size: 12; -fx-font-weight: bold;" GridPane.rowIndex="1" />
+                                <TextField fx:id="txtApellidos" promptText="Ej: Pérez López" style="-fx-font-size: 12; -fx-padding: 8; -fx-border-color: #E5E7EB; -fx-border-width: 1; -fx-border-radius: 4; -fx-background-color: #FFFFFF; -fx-text-fill: #1F2937; -fx-prompt-text-fill: #D1D5DB;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
 
-                                <Label text="Tipo de Cliente:" GridPane.rowIndex="2" />
-                                <ComboBox fx:id="cmbTipoCliente" prefWidth="250.0" promptText="Seleccionar tipo..." GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                <Label text="Tipo de Cliente:" style="-fx-text-fill: #1F2937; -fx-font-size: 12; -fx-font-weight: bold;" GridPane.rowIndex="2" />
+                                <ComboBox fx:id="cmbTipoCliente" prefWidth="250.0" promptText="Seleccionar tipo..." style="-fx-font-size: 12; -fx-padding: 8; -fx-border-color: #E5E7EB; -fx-border-width: 1; -fx-border-radius: 4; -fx-background-color: #FFFFFF;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
 
-                                <Label text="Ciudad:" GridPane.rowIndex="3" />
-                                <ComboBox fx:id="cmbCiudad" prefWidth="250.0" promptText="Seleccionar ciudad..." GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                <Label text="Ciudad:" style="-fx-text-fill: #1F2937; -fx-font-size: 12; -fx-font-weight: bold;" GridPane.rowIndex="3" />
+                                <ComboBox fx:id="cmbCiudad" prefWidth="250.0" promptText="Seleccionar ciudad..." style="-fx-font-size: 12; -fx-padding: 8; -fx-border-color: #E5E7EB; -fx-border-width: 1; -fx-border-radius: 4; -fx-background-color: #FFFFFF;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
 
-                                <Label text="Fecha Nacimiento:" GridPane.rowIndex="4" />
-                                <DatePicker fx:id="dpFechaNacimiento" prefWidth="250.0" promptText="dd/mm/aaaa" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                <Label text="Fecha Nacimiento:" style="-fx-text-fill: #1F2937; -fx-font-size: 12; -fx-font-weight: bold;" GridPane.rowIndex="4" />
+                                <DatePicker fx:id="dpFechaNacimiento" prefWidth="250.0" promptText="dd/mm/aaaa" style="-fx-font-size: 12; -fx-padding: 8; -fx-border-color: #E5E7EB; -fx-border-width: 1; -fx-border-radius: 4; -fx-background-color: #FFFFFF;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
 
-                                <Label text="Tipo de Solicitud:" GridPane.rowIndex="5" />
+                                <Label text="Tipo de Solicitud:" style="-fx-text-fill: #1F2937; -fx-font-size: 12; -fx-font-weight: bold;" GridPane.rowIndex="5" />
                                 <VBox spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
                                     <children>
-                                        <RadioButton fx:id="rbConsultoria" mnemonicParsing="false" selected="true" text="Consultoría" />
-                                        <RadioButton fx:id="rbImplementacion" mnemonicParsing="false" text="Implementación" />
-                                        <RadioButton fx:id="rbSoporte" mnemonicParsing="false" text="Soporte Técnico" />
+                                        <RadioButton fx:id="rbConsultoria" mnemonicParsing="false" selected="true" text="Consultoría" style="-fx-text-fill: #1F2937; -fx-font-size: 12;" />
+                                        <RadioButton fx:id="rbImplementacion" mnemonicParsing="false" text="Implementación" style="-fx-text-fill: #1F2937; -fx-font-size: 12;" />
+                                        <RadioButton fx:id="rbSoporte" mnemonicParsing="false" text="Soporte Técnico" style="-fx-text-fill: #1F2937; -fx-font-size: 12;" />
                                     </children>
                                 </VBox>
 
-                                <Label text="Servicios Interés:" GridPane.rowIndex="6" />
+                                <Label text="Servicios Interés:" style="-fx-text-fill: #1F2937; -fx-font-size: 12; -fx-font-weight: bold;" GridPane.rowIndex="6" />
                                 <VBox spacing="8.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
                                     <children>
-                                        <CheckBox fx:id="chkAsesoria" mnemonicParsing="false" text="Asesoría Técnica" />
-                                        <CheckBox fx:id="chkInstalacion" mnemonicParsing="false" text="Instalación" />
-                                        <CheckBox fx:id="chkCapacitacion" mnemonicParsing="false" text="Capacitación" />
+                                        <CheckBox fx:id="chkAsesoria" mnemonicParsing="false" text="Asesoría Técnica" style="-fx-text-fill: #1F2937; -fx-font-size: 12;" />
+                                        <CheckBox fx:id="chkInstalacion" mnemonicParsing="false" text="Instalación" style="-fx-text-fill: #1F2937; -fx-font-size: 12;" />
+                                        <CheckBox fx:id="chkCapacitacion" mnemonicParsing="false" text="Capacitación" style="-fx-text-fill: #1F2937; -fx-font-size: 12;" />
                                     </children>
                                 </VBox>
                             </children>
                         </GridPane>
 
                         <!-- Panel de Fotografía -->
-                        <VBox alignment="TOP_CENTER" prefWidth="220.0" spacing="15.0" styleClass="photo-section">
+                        <VBox alignment="TOP_CENTER" prefWidth="220.0" spacing="15.0" style="-fx-background-color: #F3F4F6; -fx-border-color: #E5E7EB; -fx-border-width: 1; -fx-border-radius: 6;">
                             <children>
-                                <Label styleClass="bold-label" text="Fotografía del Cliente" />
+                                <Label text="Fotografía del Cliente" style="-fx-text-fill: #1F2937; -fx-font-size: 13; -fx-font-weight: bold;" />
 
                                 <!-- Cuadro visual de la foto -->
-                                <ImageView fx:id="imgFotografia" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" styleClass="image-preview" />
+                                <ImageView fx:id="imgFotografia" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" style="-fx-border-color: #D1D5DB; -fx-border-width: 1; -fx-border-radius: 4; -fx-background-color: #FFFFFF;" />
 
-                                <Button fx:id="btnSeleccionarFoto" onAction="#handleSeleccionarFoto" styleClass="btn-secondary" text="Seleccionar Foto">
+                                <Button fx:id="btnSeleccionarFoto" onAction="#handleSeleccionarFoto" text="Seleccionar Foto" style="-fx-padding: 10 16; -fx-font-size: 12; -fx-font-weight: bold; -fx-background-color: #F3F4F6; -fx-text-fill: #1F2937; -fx-border-color: #E5E7EB; -fx-border-width: 1; -fx-border-radius: 4; -fx-cursor: hand;">
                                     <graphic>
-                                        <Label style="-fx-font-size: 14px;" text="📁 " />
+                                        <Label style="-fx-font-size: 14;" text="📁 " />
                                     </graphic>
                                 </Button>
                             </children>
@@ -118,26 +118,26 @@
 
     <!-- Barra Inferior (Bottom): Botones de Acción -->
     <bottom>
-        <HBox alignment="CENTER_RIGHT" spacing="15.0" styleClass="actions-bar" BorderPane.alignment="CENTER">
+        <HBox alignment="CENTER_RIGHT" spacing="15.0" style="-fx-background-color: #F3F4F6; -fx-border-color: #E5E7EB; -fx-border-width: 1 0 0 0;" BorderPane.alignment="CENTER">
             <padding>
                 <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
             </padding>
             <children>
-                <Button fx:id="btnLimpiar" onAction="#handleLimpiar" styleClass="btn-secondary" text="Limpiar">
+                <Button fx:id="btnLimpiar" onAction="#handleLimpiar" text="Limpiar" style="-fx-padding: 10 16; -fx-font-size: 12; -fx-font-weight: bold; -fx-background-color: #F3F4F6; -fx-text-fill: #1F2937; -fx-border-color: #E5E7EB; -fx-border-width: 1; -fx-border-radius: 4; -fx-cursor: hand;">
                     <graphic>
-                        <Label style="-fx-font-size: 14px;" text="🧹 " />
+                        <Label style="-fx-font-size: 14;" text="🧹 " />
                     </graphic>
                 </Button>
 
-                <Button fx:id="btnCancelar" onAction="#handleCancelar" styleClass="btn-danger" text="Cancelar">
+                <Button fx:id="btnCancelar" onAction="#handleCancelar" text="Cancelar" style="-fx-padding: 10 16; -fx-font-size: 12; -fx-font-weight: bold; -fx-background-color: #FEE2E2; -fx-text-fill: #991B1B; -fx-border-color: #FECACA; -fx-border-width: 1; -fx-border-radius: 4; -fx-cursor: hand;">
                     <graphic>
-                        <Label style="-fx-font-size: 14px; -fx-text-fill: #e74c3c;" text="❌ " />
+                        <Label style="-fx-font-size: 14; -fx-text-fill: #e74c3c;" text="❌ " />
                     </graphic>
                 </Button>
 
-                <Button fx:id="btnGuardar" onAction="#handleGuardar" styleClass="btn-primary" text="Guardar Cliente">
+                <Button fx:id="btnGuardar" onAction="#handleGuardar" text="Guardar Cliente" style="-fx-padding: 10 16; -fx-font-size: 12; -fx-font-weight: bold; -fx-background-color: #1E40AF; -fx-text-fill: #FFFFFF; -fx-border-color: #1E40AF; -fx-border-width: 0; -fx-border-radius: 4; -fx-cursor: hand;">
                     <graphic>
-                        <Label style="-fx-font-size: 14px; -fx-text-fill: #27ae60;" text="💾 " />
+                        <Label style="-fx-font-size: 14; -fx-text-fill: #27ae60;" text="💾 " />
                     </graphic>
                 </Button>
             </children>
