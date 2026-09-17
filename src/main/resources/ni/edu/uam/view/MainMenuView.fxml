@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="600.0" prefWidth="900.0" styleClass="main-container" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uam.casopractico.controller.MainMenuController">
+
+    <!-- 1. MenuBar -->
+    <top>
+        <VBox spacing="0.0" BorderPane.alignment="CENTER">
+            <children>
+                <MenuBar styleClass="menu-bar">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="Archivo">
+                            <items>
+                                <MenuItem fx:id="menuCerrarSesion" mnemonicParsing="false" onAction="#handleCerrarSesion" text="Cerrar Sesión" />
+                                <SeparatorMenuItem mnemonicParsing="false" />
+                                <MenuItem fx:id="menuSalir" mnemonicParsing="false" onAction="#handleSalir" text="Salir" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Gestión">
+                            <items>
+                                <MenuItem fx:id="menuRegistrarCliente" mnemonicParsing="false" onAction="#handleNavRegistro" text="Registrar Cliente" />
+                                <MenuItem fx:id="menuConsultarClientes" mnemonicParsing="false" onAction="#handleNavConsulta" text="Consultar Clientes" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Ayuda">
+                            <items>
+                                <MenuItem fx:id="menuAcercaDe" mnemonicParsing="false" onAction="#handleAcercaDe" text="Acerca de" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+
+                <!-- 2. ToolBar -->
+                <ToolBar styleClass="tool-bar">
+                    <items>
+                        <Button fx:id="btnTbRegistro" onAction="#handleNavRegistro" styleClass="btn-toolbar" text="➕ Nuevo Cliente" />
+                        <Button fx:id="btnTbConsulta" onAction="#handleNavConsulta" styleClass="btn-toolbar" text="🔍 Consultar Clientes" />
+                    </items>
+                </ToolBar>
+            </children>
+        </VBox>
+    </top>
+
+    <!-- 3. Contenido Central -->
+    <center>
+        <VBox alignment="CENTER" spacing="20.0" styleClass="content-area" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+            </padding>
+            <children>
+                <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/logo.png" />
+                    </image>
+                </ImageView>
+
+                <Label styleClass="title-label" text="Sistema de Gestión de Solicitudes" />
+                <Label styleClass="subtitle-label" text="Seleccione una opción para comenzar" />
+
+                <HBox alignment="CENTER" spacing="20.0">
+                    <children>
+                        <!-- Botón Registrar Cliente con ícono corregido -->
+                        <Button fx:id="btnCardRegistro" alignment="CENTER" contentDisplay="TOP" onAction="#handleNavRegistro" prefHeight="110.0" prefWidth="170.0" styleClass="btn-card" text="Registrar Cliente">
+                            <graphic>
+                                <Label text="➕" style="-fx-font-size: 26px; -fx-text-fill: #2c3e50;" />
+                            </graphic>
+                        </Button>
+
+                        <!-- Botón Consultar Clientes -->
+                        <Button fx:id="btnCardConsulta" alignment="CENTER" contentDisplay="TOP" onAction="#handleNavConsulta" prefHeight="110.0" prefWidth="170.0" styleClass="btn-card" text="Consultar Clientes">
+                            <graphic>
+                                <Label text="📋" style="-fx-font-size: 26px; -fx-text-fill: #2c3e50;" />
+                            </graphic>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </center>
+
+    <!-- 4. ContextMenu integrado correctamente dentro de un control (Label de Estado) -->
+    <bottom>
+        <HBox alignment="CENTER_LEFT" styleClass="status-bar" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+            </padding>
+            <children>
+                <Label fx:id="lblEstado" styleClass="status-text" text="Estado: Sesión activa">
+                    <contextMenu>
+                        <ContextMenu>
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#handleAcercaDe" text="Acerca del Sistema" />
+                                <MenuItem mnemonicParsing="false" onAction="#handleCerrarSesion" text="Cerrar Sesión" />
+                            </items>
+                        </ContextMenu>
+                    </contextMenu>
+                </Label>
+            </children>
+        </HBox>
+    </bottom>
+
+</BorderPane>
