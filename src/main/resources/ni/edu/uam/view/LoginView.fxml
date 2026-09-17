@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="500.0" minWidth="750.0" prefHeight="500.0" prefWidth="750.0" styleClass="login-container" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uam.casopractico.controller.LoginController">
+    <left>
+        <VBox prefHeight="500.0" prefWidth="150.0" spacing="20.0" styleClass="sidebar" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+
+            <ImageView fitHeight="70.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../images/logo.png" />
+                </image>
+            </ImageView>
+
+            <!-- TÃ­tulo sidebar -->
+            <Label styleClass="sidebar-title" text="Sistema de Gestión de Solicitudes" textAlignment="CENTER" wrapText="true">
+                <font>
+                    <Font name="System Bold" size="14.0" />
+                </font>
+            </Label>
+            <!-- Separador -->
+            <VBox prefHeight="20.0" />
+            <!-- Opciones de menÃº -->
+            <Label styleClass="sidebar-menu-item" />
+            <Label styleClass="sidebar-menu-item" />
+            <Label styleClass="sidebar-menu-item" />
+            <!-- Spacer -->
+            <VBox VBox.vgrow="ALWAYS" />
+            <!-- Footer -->
+            <Label styleClass="sidebar-footer" text="v1.0.0 - 2025" />
+        </VBox>
+    </left>
+    <center>
+        <VBox prefHeight="500.0" prefWidth="600.0" spacing="20.0" styleClass="login-form-container" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="40.0" left="50.0" right="50.0" top="60.0" />
+            </padding>
+            <!-- TÃ­tulo principal -->
+            <Label styleClass="login-title" text="Acceso al sistema">
+                <font>
+                    <Font name="System Bold" size="28.0" />
+                </font>
+            </Label>
+            <!-- SubtÃ­tulo -->
+            <Label styleClass="login-subtitle" text="Ingrese sus credenciales para continuar">
+                <font>
+                    <Font size="12.0" />
+                </font>
+            </Label>
+            <!-- Espaciador -->
+            <VBox prefHeight="10.0" />
+            <!-- Campo Usuario -->
+            <VBox spacing="8.0">
+                <Label styleClass="form-label" text="Usuario">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="usuarioTextField" maxWidth="1.7976931348623157E308" promptText="Nombre de usuario" styleClass="form-textfield" />
+            </VBox>
+            <!-- Campo ContraseÃ±a -->
+            <VBox spacing="8.0">
+                <Label styleClass="form-label" text="Contraseña">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <PasswordField fx:id="passwordField" maxWidth="1.7976931348623157E308" promptText="Ingrese su contraseña" styleClass="form-textfield" />
+            </VBox>
+            <!-- Espaciador -->
+            <VBox prefHeight="15.0" />
+            <!-- Botones -->
+            <HBox alignment="CENTER_LEFT" spacing="15.0">
+                <Button fx:id="iniciarSesionButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleIniciarSesion" styleClass="btn-primary" text="Iniciar sesión" HBox.hgrow="ALWAYS">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Button>
+                <Button fx:id="salirButton" mnemonicParsing="false" onAction="#handleSalir" styleClass="btn-secondary" text="Salir">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Button>
+            </HBox>
+            <!-- Pie de pÃ¡gina -->
+            <VBox VBox.vgrow="ALWAYS" />
+            <Label styleClass="login-footer" textAlignment="CENTER" wrapText="true">
+                <font>
+                    <Font size="10.0" />
+                </font>
+            </Label>
+        </VBox>
+    </center>
+</BorderPane>
