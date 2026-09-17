@@ -1,3 +1,9 @@
+Integrantes:
+Andrea Sofia De La Roca Delgado
+Alfredo David Montalvan Osejo
+Jorge Adan Ortega Torres
+Nazario Escoto Largaespada
+
 Registro y Consulta de Clientes
 
 Este proyecto consiste en una aplicación de escritorio creada para facilitar el registro y consulta de clientes de una empresa. El sistema permite guardar la información básica de cada cliente junto con el tipo de solicitud que desea realizar.
