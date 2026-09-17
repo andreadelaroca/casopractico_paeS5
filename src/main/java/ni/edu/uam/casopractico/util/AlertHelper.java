@@ -42,4 +42,13 @@ public class AlertHelper {
         return resultado.isPresent()
                 && resultado.get() == ButtonType.OK;
     }
+
+    public static void detalleCliente(String titulo, String encabezado, String mensaje) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(titulo);
+        alert.setHeaderText(encabezado);
+        alert.setContentText(mensaje);
+        alert.showAndWait();
+    }
+
 }
