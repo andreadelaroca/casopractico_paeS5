@@ -15,26 +15,29 @@ import static ni.edu.uam.casopractico.util.NavigationManager.*;
 public class LoginController {
 
     @FXML
-    TextField txtUsername;
+    private TextField usuarioTextField;
     @FXML
-    PasswordField pssPassword;
+    private PasswordField passwordField;
     @FXML
-    Button btnLogin;
-    Stage stage = (Stage) btnLogin.getScene().getWindow();
+    private Button iniciarSesionButton;
+    @FXML
+            private Button salirButton;
+
+    Stage stage = (Stage) iniciarSesionButton.getScene().getWindow();
 
     @FXML
     private void iniciarSesion() {
-        String user = txtUsername.getText().trim();
-        String pass = pssPassword.getText().trim();
+        String user = usuarioTextField.getText().trim();
+        String pass = pass.getText().trim();
         int intentos = 0;
 
         while (intentos < 3) {
-            if (user.isEmpty() || pssPassword.getText().isEmpty()) {
+            if (user.isEmpty() || pass.getText().isEmpty()) {
                 advertencia("Campos incompletos", "Debe completar todos los campos.");
                 limpiar();
                 intentos++;
                 return;
-            } else if (user.equals("admin") && pssPassword.equals("1234")) {
+            } else if (user.equals("admin") && pass.equals("1234")) {
                 informacion("Operación exitosa", "Ha iniciado sesión exitosamente.");
                 abrirMenu();
             }
@@ -56,8 +59,8 @@ public class LoginController {
     }
 
     private void limpiar() {
-        txtUsername.clear();
-        pssPassword.clear();
-        txtUsername.requestFocus();
+        usuarioTextField.clear();
+        passwordField.clear();
+        usuarioTextField.requestFocus();
     }
 }
