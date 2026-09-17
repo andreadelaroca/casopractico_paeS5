@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane prefHeight="650.0" prefWidth="900.0" styleClass="main-container" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uam.casopractico.controller.ClienteConsultaController">
+<BorderPane prefHeight="650.0" prefWidth="900.0" styleClass="main-container" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ni.edu.uam.casopractico.controller.ClienteConsultaController" onKeyPressed="#handleKeyPressed">
 
     <!-- Encabezado -->
     <top>
@@ -74,7 +74,7 @@
                         <Label style="-fx-font-size: 14px;" text="⬅ " />
                     </graphic>
                 </Button>
-                <Button fx:id="btnEditar" onAction="#handleEditar" styleClass="btn-primary" text="Ver / Editar Detalle">
+                <Button fx:id="btnEditar" onAction="#handleVerDetalle" styleClass="btn-primary" text="Ver Detalle">
                     <graphic>
                         <Label style="-fx-font-size: 14px; -fx-text-fill: white;" text="✏ " />
                     </graphic>
