@@ -7,5 +7,6 @@ module ni.edu.uam.casopractico {
     exports ni.edu.uam.casopractico.controller to javafx.fxml;
     opens ni.edu.uam.casopractico.controller to javafx.fxml;
     opens ni.edu.uam.casopractico to javafx.fxml;
+    opens ni.edu.uam.casopractico.model to javafx.base;
     exports ni.edu.uam.casopractico;
 }
