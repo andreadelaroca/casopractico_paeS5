@@ -36,21 +36,22 @@ public class LoginController {
                 limpiar();
                 return;
             }
-            if (user.equals("admin") && pass.equals("1234")) {
+            else if (user.equals("admin") && pass.equals("1234")) {
                 informacion("Operación exitosa", "Ha iniciado sesión exitosamente.");
                 abrirMenu();
+                return;
             }
             else {
                 intentos++;
-                if (intentos >= 3) {
-                    informacion("Intentos sobrepasados", "Ha intentado entrar al sistema 3 veces. Cerrando ventana.");
-                    cerrarVentana();
-                }
-                else {
-                    error("Credenciales incorrectas", "Credenciales incorrectas, vuelva a intentarlo.");
-                    limpiar();
-                }
+                error("Credenciales incorrectas", "Credenciales incorrectas, vuelva a intentarlo.");
+                limpiar();
+                return;
             }
+        }
+        if (intentos >= 3) {
+            informacion("Intentos sobrepasados", "Ha intentado entrar al sistema 3 veces. Cerrando ventana.");
+            cerrarVentana();
+            return;
         }
     }
 

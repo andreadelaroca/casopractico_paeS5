@@ -32,15 +32,13 @@ public class MainMenuController {
     @FXML
     private void handleNavRegistro(ActionEvent event) {
         lblEstado.setText("Estado: Cargando pantalla de registro...");
-        abrirVentana("ni/edu/uam/view/ClienteRegistroView.fxml", "Registro de Clientes");
-        mostrarAlerta(Alert.AlertType.INFORMATION, "Navegación", "Módulo de Registro de Clientes");
+        abrirVentana("/ni/edu/uam/view/ClienteRegistroView.fxml", "Registro de Clientes");
     }
 
     @FXML
     private void handleNavConsulta(ActionEvent event) {
         lblEstado.setText("Estado: Cargando pantalla de consulta...");
-        abrirVentana("ni/edu/uam/view/ClienteConsultaView.fxml", "Registro de Clientes");
-        mostrarAlerta(Alert.AlertType.INFORMATION, "Navegación", "Módulo de Consulta de Clientes");
+        abrirVentana("/ni/edu/uam/view/ClienteConsultaView.fxml", "Registro de Clientes");
     }
 
     @FXML
@@ -51,8 +49,7 @@ public class MainMenuController {
 
         alert.showAndWait().ifPresent(response -> {
             if (response == ButtonType.YES) {
-                lblEstado.setText("Estado: Sesión cerrada");
-                abrirVentana("ni/edu/uam/view/LoginView.fxml", "Registro de Clientes");
+                abrirVentana("/ni/edu/uam/view/LoginView.fxml", "Inicio de Sesión");
             }
         });
     }
